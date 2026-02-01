@@ -1,1 +1,2 @@
-# idk2-controller
+# wolf-mini-mpc
+
