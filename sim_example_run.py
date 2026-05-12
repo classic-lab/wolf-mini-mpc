@@ -27,6 +27,7 @@ def main():
     zero_torques = np.zeros(12)
     mj_sim.run(zero_torques)
 
+# fix from 5/12/2026
 
 if __name__ == "__main__":
     main()
