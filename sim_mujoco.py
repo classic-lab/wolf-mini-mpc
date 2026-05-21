@@ -100,7 +100,13 @@ class WolfMiniSim:
         
         try:
             # Launch viewer
-            this.viewer = mjv.launch_passive(this.model, this.data)
+            this.viewer = mjv.launch_passive(
+                this.model,
+                this.data
+                # font_scale=mj.mjtFontScale.mjFONTSCALE_50
+            )
+
+            # this.viewer.font_scale = mj.mjtFontScale.mjFONTSCALE_100 
 
             # Camera configuration
             this.viewer.cam.azimuth = this.simCamConfig.cam_azimuth
@@ -127,6 +133,8 @@ class WolfMiniSim:
         this.launch_viewer(False, False, False)
 
         with this.viewer:
+            # this.viewer.font_scale = mj.mjtFontScale.mjFONTSCALE_100 
+            # this.render()            
             while this.viewer.is_running():
                 state = this.get_state()
                 # tau = controller.compute_control(state)
